@@ -1,0 +1,6 @@
+<h1>wallet balance</h1>
+<ul>
+     {% for funds in fund %}
+        <li><b>email</b>: {{ funds.email }} <b>amount</b>: (# {{ funds.amount }}) </li>
+     {% endfor %}
+</ul>

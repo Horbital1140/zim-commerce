@@ -1,0 +1,26 @@
+ 
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1>MY_FOOD</h1>
+   <div class="row">
+      {% for food in MY_FOOD %}
+      <div class="col">
+         <div class="card" style="width: 18rem;">
+            <img src="{{ food.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> {{food.name }}</h5>
+              <p class="card-text"> PRICE:  #{{ food.price }}</p>
+              <p class="card-text">IN STOCK: {{ food.stock }}</p>
+              <p class="card-text">{{ food.description }}</p>
+              <a href="#" class="btn btn-primary">purchase</a>
+            </div>
+          </div>
+      </div>
+      {% endfor %}
+   </div>
+   
+{% endblock %}
+
+
+
